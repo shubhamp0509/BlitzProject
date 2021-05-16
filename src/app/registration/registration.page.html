@@ -1,0 +1,317 @@
+<ion-content>
+
+
+  <form [formGroup]="RegForm" novalidate>
+    <div class="login-section ion-padding">
+
+    <div class="heading ion-padding">
+      <h1>Welcome !!</h1>
+      <p class="p1">Register to Continue</p>
+    </div>
+
+    <ion-slides #slides >
+
+
+      <ion-slide>
+        <ion-row class="firstslide">
+    <!--First Name-->
+    <div class="from-input">
+
+         <ion-item lines="full">
+      <ion-input formControlName="name" type="text" required placeholder="First Name" ></ion-input>
+    </ion-item>
+  </div>
+
+    <!--Validation -->
+
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+
+    </span>
+
+    <br><br>
+
+
+      <!--Middle Name-->
+      <ion-item lines="full">
+
+        <ion-input formControlName="Mname" type="text" required placeholder="Middle Name"></ion-input>
+      </ion-item>
+
+
+      <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.Mname.errors?.minlength">
+        Middle must be 3 chars
+      </span> -->
+
+      <br><br>
+
+
+       <!--Last Name-->
+       <ion-item lines="full">
+
+        <ion-input formControlName="Lname" type="text" required placeholder="Last Name"></ion-input>
+      </ion-item>
+
+      <!--Validation -->
+
+
+      <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.Lname.errors?.minlength">
+            Last must be 3 chars
+      </span> -->
+
+    </ion-row>
+
+  </ion-slide>
+
+<ion-slide >
+  <ion-row class="secondslide">
+      <div style="margin-right: 100px;">
+
+          <!--radio button-->
+    <ion-item >
+      <ion-label position="floating">Gender</ion-label><br><br>
+    <label >
+     <input type="radio" value="Male" formControlName="gender">
+       <span>Male</span>
+   </label> <br>
+
+   <label >
+     <input type="radio" value="Female" formControlName="gender"  >
+       <span>Female</span>
+   </label><br>
+  </ion-item>
+
+  <!--validation-->
+  <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.gender.errors?.required">
+   Gender is required.
+  </span> -->
+
+      </div>
+
+
+      <!--DoB-->
+       <div style="margin-right: 250px;">
+    <ion-item lines="full">
+      <ion-label position="floating">DOB</ion-label>
+      <ion-datetime formControlName="dob" (ionChange)="getDate($event)" [value]="defaultDate"></ion-datetime>
+    </ion-item>
+    </div>
+  </ion-row>
+    </ion-slide>
+
+
+
+  <br><br>
+
+
+
+  <ion-slide>
+       <!--Address-->
+    <ion-row class="slide3">
+       <ion-item lines="full">
+        <!-- <ion-label position="floating">Address</ion-label> -->
+        <ion-input formControlName="address" type="text" required placeholder="address"></ion-input>
+      </ion-item>
+
+      <!--Validation -->
+      <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.address.errors?.required">
+        Address is required.
+      </span> -->
+
+
+
+
+        <!--Profession-->
+        <ion-item lines="full">
+          <ion-label position="floating">Profession</ion-label>
+          <ion-input formControlName="profession" type="text" required></ion-input>
+        </ion-item>
+
+        <!--Validation -->
+        <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.profession.errors?.required">
+        profession is required
+        </span> -->
+
+
+
+
+
+
+
+
+
+    <!--Email-->
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email" required></ion-input>
+    </ion-item>
+    <!--Validation -->
+    <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
+      Email is required.
+    </span> -->
+    <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+
+    </span> -->
+
+
+
+        <!--Mobile-->
+
+        <ion-item lines="full" >
+          <ion-label position="floating">Mobile</ion-label>
+          <ion-input formControlName="mobile" type="text" required></ion-input>
+        </ion-item>
+
+        <!--Validation -->
+        <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.mobile.errors?.required">
+          Mobile number is required.
+        </span> -->
+        <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.mobile.errors?.pattern">
+        **
+        </span> -->
+
+
+
+
+
+     <!--Blood Group-->
+<ion-row class="bloodgrp">
+   <ion-item lines="full">
+    <ion-label position="floating">Blood</ion-label>
+   <ion-select formControlName="blodGroup" >
+     <ion-select-option value="a">a</ion-select-option>
+     <ion-select-option value="b">b</ion-select-option>
+     <ion-select-option value="c">c</ion-select-option>
+   </ion-select>
+ </ion-item>
+</ion-row>
+
+
+
+  <!--validation-->
+  <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.blodGroup.errors?.required">
+ Select Blood Group
+  </span> -->
+
+
+
+
+  </ion-row>
+
+
+  </ion-slide>
+
+
+
+
+
+
+  <ion-slide>
+    <ion-row class="slide4">
+  <br><br>
+
+
+   <!--username-->
+   <ion-item lines="full">
+    <ion-label position="floating">Username</ion-label>
+    <ion-input formControlName="username" type="text" required></ion-input>
+  </ion-item>
+
+  <!--Validation -->
+  <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.username.errors?.required">
+    userame is required.
+  </span> -->
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.username.errors?.minlength">
+
+  </span>
+
+
+     <!--Password-->
+     <ion-item lines="full">
+      <ion-label position="floating">Select Password</ion-label>
+      <ion-input formControlName="password" type="password" required></ion-input>
+    </ion-item>
+      <!--Validation -->
+  <div class="error" *ngIf="isSubmitted && errorControl.password.errors">
+
+    <span class="error ion-padding" *ngIf="errorControl.password.errors.minlength">
+    </span>
+  </div>
+
+
+      <!--confirm Password-->
+      <ion-item lines="full">
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input formControlName="cpassword" type="password" required Equalvalidate="password"></ion-input>
+      </ion-item>
+
+
+
+  <!--Validation -->
+  <div class="error" *ngIf="isSubmitted && errorControl.cpassword.errors">
+  <!-- <span class="error ion-padding" *ngIf="errorControl.cpassword.errors.required">
+password
+  </span> -->
+  <span class="error ion-padding" *ngIf="errorControl.cpassword.errors.MustMatch">
+
+  </span>
+</div>
+
+<!-- <img src="" style="width: 100%"
+    [hidden]="lastImage === null" class="imgcircle">
+
+     <ion-toolbar color="primary">
+      <ion-buttons>
+
+  <button ion-button icon-left (click)="presentActionSheet()">
+    <ion-icon name="camera"></ion-icon>Select Image
+  </button>
+
+  <button ion-button icon-left (click)="uploadImage()"
+  [disabled]="lastImage=== null">
+    <ion-icon name="cloud-upload"></ion-icon>Upload
+  </button>
+
+  </ion-buttons>
+  </ion-toolbar> -->
+
+
+
+</ion-row>
+
+<br><br>
+</ion-slide>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+</ion-slides>
+<br><br>
+<ion-row>
+  <ion-col>
+    <!-- <button type="submit" float-left ion-button  color="primary" class="btnPrev" (click)="prev()">prev</button>
+    <button type="submit" float-right ion-button color="primary" class="btnNext" (click)="next()">Next</button> -->
+
+    <ion-button type="submit" class="action-button"   (click)="registerUser()">Submit</ion-button>
+    <p class="already">Already Have a Acccount ? <b  class="signup" routerLink="/login">Log In</b> </p>
+    <!-- [disabled]="RegForm.invalid" -->
+  </ion-col>
+</ion-row>
+</div>
+</form>
+
+</ion-content>
+
+
+

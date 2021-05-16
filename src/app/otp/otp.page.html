@@ -1,0 +1,71 @@
+<!-- <ion-content>
+
+  <form [formGroup]="mobileLogin" novalidate>
+
+    <div class="from-input">
+
+      <ion-item lines="full">
+   <ion-input formControlName="mobileno" type="number" required placeholder="Enter Mobile No" ></ion-input>
+  </ion-item>
+
+
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.mobileno.errors?.pattern">
+         Enter Valid Phone Number
+          </span>
+  </div>
+
+
+
+
+
+
+
+
+  <ion-button type="submit" class="action-button"    (click)="onSubmit()">Submit</ion-button>
+
+
+
+
+  </form>
+  <ion-button size="large" class="login-button" routerLink="/login"  >Log In</ion-button>
+
+  </ion-content> -->
+
+
+  <ion-content>
+
+    <div class="container">
+
+
+      <div class="header">
+        <h2 class="loginHead">Login With Mobile</h2>
+      </div>
+
+
+      <!-- <form [formGroup]="mobileLogin" novalidate> -->
+        <form [formGroup]="mobileLogin" novalidate>
+        <div class="from-input">
+          <div class="allItems">
+          <ion-item lines="full">
+            <ion-input type="text" formControlName="mobileno" required placeholder="Enter Mobile No"></ion-input>
+          </ion-item>
+
+          <!-- <span class="error ion-padding" *ngIf="isSubmitted && errorControl.mobileno.errors?.pattern">
+            Enter Valid Phone Number
+          </span> -->
+        </div>
+      </div>
+
+        <ion-button type="submit" class="submit-btn" (click)="onSubmit()" >Get Otp</ion-button>
+      </form>
+
+
+      <div class="footer">
+        <h3> BLITZCODE </h3>
+        <P>pune asdsadaskdma ajskdbaskjbdas jsahdhsakdjaskd jjkasd jkhjh kjhasjhd kahs das</P>
+        </div>
+
+
+    </div>
+
+  </ion-content>

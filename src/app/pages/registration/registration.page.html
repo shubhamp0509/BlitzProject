@@ -1,0 +1,123 @@
+<!-- <ion-searchbar value="Ionic"></ion-searchbar> -->
+<ion-header>
+  <ion-toolbar class="profileToolbar">
+    <ion-buttons slot="start">
+      <ion-button color="light" (click)="BackButton()" routerDirection="root">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-title>Register To Continue</ion-title>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button slot="end" routerLink="/login" >
+        <ion-icon name="exit-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+
+
+<div class="container">
+  <form [formGroup]="registerMember">
+
+    <div>
+
+
+      <ion-item class="forms">
+        <ion-label position="floating">Ward Name</ion-label>
+        <ion-input type="text" placeholder="personal" formControlName="wardName" readonly="true" [(ngModel)]="wardName2" ></ion-input>
+      </ion-item>
+
+      <ion-item class="forms">
+        <ion-label position="floating">Full Name</ion-label>
+        <ion-input type="text" placeholder="Enter Full Name" formControlName="fullname"></ion-input>
+      </ion-item>
+
+      <ion-item class="forms">
+        <ion-label position="floating">Phone No</ion-label>
+        <ion-input type="text" placeholder="Enter Member phone no" readonly="true" [(ngModel)]="mobile" formControlName="phone" ></ion-input>
+      </ion-item>
+
+      <ion-item class="forms">
+        <ion-label position="floating">Email Id</ion-label>
+        <ion-input type="text" placeholder="Enter Email Address" formControlName="address"></ion-input>
+      </ion-item>
+
+      <ion-item class="forms">
+        <ion-label position="floating">DOB</ion-label>
+        <ion-datetime [max]="2015" formControlName="dob"></ion-datetime>
+      </ion-item>
+
+
+      <ion-item lines="full">
+        <ion-label position="floating">Blood</ion-label>
+        <ion-select formControlName="blood">
+          <ion-select-option value="a">a</ion-select-option>
+          <ion-select-option value="b">b</ion-select-option>
+          <ion-select-option value="c">c</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+
+      <ion-item class="forms">
+        <ion-label position="floating">Profession</ion-label>
+        <ion-input type="text" placeholder="Enter profession" formControlName="profession"></ion-input>
+      </ion-item>
+
+
+
+
+      <ion-item>
+        <ion-label position="floating">Gender</ion-label><br><br>
+        <label>
+          <input type="radio" value="Male" formControlName="gender">
+          <span>Male</span> </label>
+
+       <span>
+        <label>
+          <input type="radio" value="Female" formControlName="gender">
+          <span>Female</span>
+        </label><br>
+        </span>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Select Password</ion-label>
+        <ion-input formControlName="password" type="password" ></ion-input>
+
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input formControlName="cpassword" type="password" required Equalvalidate="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <input type="file" (change)="onFileChange($event)"/>
+      </ion-item>
+
+
+      <ion-button class="addBtn" (click)="submitForm()">
+        <ion-icon slot="start" name="add"></ion-icon>Register
+      </ion-button>
+
+
+    </div>
+
+
+  </form>
+
+</div>
+
+
+
+
+
+</ion-content>

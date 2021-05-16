@@ -1,0 +1,130 @@
+ion-content{
+  --background:linear-gradient(0deg,rgba(45, 116, 238, 0.7),rgba(112, 90, 211, 0.1)),
+  url("/assets/login.png") no-repeat center center / cover;
+}
+
+
+.login-section{
+  height:80vh ;
+  width:100%;
+  max-width:500px;
+  background-color: #fff;
+  right:0;
+  left: 0;
+  bottom: 0;
+  top:-12px;
+  position:fixed;
+  margin: auto;
+  border-top-left-radius: 46px;
+  border-top-right-radius: 46px;
+  border-bottom-left-radius: 46px;
+  border-bottom-right-radius: 46px;
+}
+
+
+.heading{
+  margin-top: -50px;
+  h1{
+      font: size 1.6rem;
+      font-weight: bolder;
+      color:#265bee ;
+  }
+  .p1{
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #7b7b7b;
+
+      }
+}
+
+
+
+
+  .form-input{
+      text-align:center;
+      position: relative;
+      margin-bottom:5px ;
+      ion-item::part(native){
+          padding-left: 0;
+          text-align:center;
+      }
+      ion-icon{
+          position: absolute;
+          top:37px;
+          z-index:2;
+          font-size: 1.2rem;
+          left: 5px;
+      }
+      ion-label{
+          position: absolute;
+          margin-left: 35px;
+          font-weight: bolder;
+          font-size: 0.0rem;
+          top:3px;
+      }
+      ion-input{
+          font-size: 1.2rem;
+          --padding-start:36px;
+          --padding-top:36px;
+          color: #7b7b7b;
+      }
+  }
+
+
+
+
+  .login-button{
+      --background: #265bee;
+      width: 100%;
+      font-weight: bold;
+      // text-align:center;
+      margin-top: -2000px;
+      margin-left: 45px;
+
+  }
+
+  p
+  {
+      margin-top: 15px;
+      font-size: 1.5rem;
+      color: #7b7b7b;
+      text-align: center;
+      b{
+          --border-color:#b4b4b4;
+          font-weight: bold;
+          color:#265bee ;
+      }
+  }
+  .signup-button{
+      --border-color:#b4b4b4;
+      font-weight: bold;
+
+  }
+
+
+
+.firstslide
+{
+  text-align: center;
+  margin-left: 45px;
+}
+.secondslide
+{
+  margin-left: 205px;
+}
+.slide4,.slide3{
+  text-align: center;
+  margin-left: 45px;
+}
+.nextArrow,.prevArrow{
+  color:#265bee ;
+}
+
+.action-button{
+  text-align: center;
+  background-color: #265bee;
+  margin-left: 120px;
+
+
+}
+

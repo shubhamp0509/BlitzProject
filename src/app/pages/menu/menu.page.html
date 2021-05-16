@@ -1,0 +1,145 @@
+<ion-app>
+  <ion-menu contentId="content">
+    <ion-content>
+  <div class="menu-header-bg"></div>
+    <div class="header-content">
+      <img src="../../../assets/icon/favicon.png" alt="">
+      <ion-label *ngIf="!isRegistred">
+        <h2>Hello</h2>
+        <p>Guest</p>
+      </ion-label>
+      <ion-label *ngIf="isRegistred" (click)="profileForward()">
+        <h2>{{profileName}}</h2>
+        <p>{{userEmail}}</p>
+      </ion-label>
+    </div>
+  <div class="action-button">
+    <ion-button [disabled]="!isRegistred" (click)="addMember()"  >
+      <ion-icon slot="start"  name="add"></ion-icon>Add Member
+    </ion-button>
+  </div>
+  <ion-menu-toggle auto-hide="false">
+  <ion-list lines="none" class="menu-items">
+    <ion-item   routerDirection="root" routerLinkActive="active" >
+      <ion-icon name="pie-chart-outline"></ion-icon>First
+    </ion-item>
+
+    <ion-item   routerDirection="root" routerLinkActive="active" >
+      <ion-icon name="heart-outline" ></ion-icon>Second
+    </ion-item>
+    <ion-item routerLink="/login"  routerDirection="root" routerLinkActive="active">
+      <ion-icon name="exit-outline"  routerDirection="root" routerLinkActive="active" (click)="authService.logout()" ></ion-icon>sign out
+    </ion-item>
+
+
+  </ion-list>
+</ion-menu-toggle>
+
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-app>
+
+
+
+
+
+ <!-- <ion-app>
+  <ion-menu contentId="content">
+    <ion-content>
+  <div class="menu-header-bg"></div>
+    <div class="header-content">
+      <img src="../../../assets/icon/favicon.png" alt="">
+      <ion-label>
+        <h2>Lakhan Tumma</h2>
+        <p>BlitzCode pune</p>
+      </ion-label>
+    </div>
+  <div class="action-button">
+    <ion-button>
+      <ion-icon slot="start" name="add"></ion-icon>Add
+    </ion-button>
+  </div>
+  <ion-menu-toggle auto-hide="false">
+  <ion-list lines="none" class="menu-items">
+    <ion-item   routerDirection="root" routerLinkActive="active" >
+      <ion-icon name="pie-chart-outline"></ion-icon>First
+    </ion-item>
+
+    <ion-item   routerDirection="root" routerLinkActive="active" >
+      <ion-icon name="heart-outline" ></ion-icon>Second
+    </ion-item>
+
+    <ion-item >
+      <ion-icon name="exit-outline"></ion-icon>sign out
+    </ion-item>
+
+
+  </ion-list>
+   </ion-menu-toggle>
+
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-app> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<ion-split-pane>
+<ion-menu contentId="content">
+
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+      <ion-item [routerLink]="p.url" routerDirection="root" [class.active-item]="selectedPath.startsWith(p.url)"></ion-item>
+<ion-label>
+  {{p.title}}
+</ion-label>
+    </ion-menu-toggle>
+
+    <ion-item tappable routerLink='/login' routerDirection="root">
+    <ion-icon name="log-out" slot="start"></ion-icon>Log out</ion-item>
+  </ion-list>
+</ion-content>
+
+</ion-menu>
+<ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-pane> -->
+
+<p>Hello</p>

@@ -1,0 +1,133 @@
+ <!-- <ion-header>
+  <ion-toolbar class="profileToolbar">
+    <ion-buttons slot="start">
+      <ion-button color="light"  (click)="backForward()" routerDirection="root">
+        <ion-icon name="arrow-back" ></ion-icon>
+      </ion-button>
+      <ion-title>Profile</ion-title>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button slot="end" routerLink="/login"><ion-icon name="exit-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+<ion-content fullscreen>
+
+
+    <div class="profile-card">
+      <div class="image-container">
+        <ion-avatar slot="end">
+        <img [src]="profilesrc" height="350" class="image">
+       </ion-avatar>
+
+          <h5 class="main-name">{{profileName}}</h5>
+
+
+      </div>
+
+
+    <div class="main-contnent" >
+    <p> <ion-icon name="briefcase" class="info"></ion-icon>{{profeesion}}</p>
+    <p> <ion-icon name="mail" class="info"></ion-icon> {{userEmail}}</p>
+    <p> <ion-icon name="call" class="info"></ion-icon>{{contactNumber}}</p>
+    <p> <ion-icon name="home" class="info"></ion-icon> solapur,Maharashtra</p>
+    <hr>
+
+    <ion-button class="manage">
+      <ion-icon slot="start" name="add"></ion-icon>Manage Details
+    </ion-button>
+
+   </div>
+
+  </div>
+
+
+    <ion-list *ngFor="let jsons of members" >
+
+
+      <ion-item  >
+        <ion-avatar slot="start">
+          <img src="../../../assets/icon/favicon.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{jsons.fName}}</h2>
+          <h3>{{jsons.email}}</h3>
+          <h3>{{jsons.gender}}</h3>
+          <h3>{{jsons.bloodGroup}}</h3>
+          <h3>{{jsons.profeesion}}</h3>
+          <h3>{{jsons.relation}}</h3>
+          <h3>{{jsons.mobile}}</h3>
+
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+
+
+
+
+
+
+</ion-content>
+
+
+
+ -->
+
+
+ <ion-header>
+  <ion-toolbar class="profileToolbar">
+    <ion-buttons slot="start">
+      <ion-button color="light"  (click)="backForward()" routerDirection="root">
+        <ion-icon name="arrow-back" class="arrow" ></ion-icon>
+      </ion-button>
+      <ion-title>Profile</ion-title>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content fullscreen="true" slot="fixed" >
+  <div class="card">
+    <div class="header">
+      <div class="avatar">
+        <img [src]="profilesrc" alt="">
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="user-meta ion-text-center">
+        <h3 class="membername"> {{profileName}}</h3>
+        <h5 class="country">India</h5>
+        <h6 class="ranking"> No Of Members: <ion-chip>
+          <ion-label>2</ion-label>
+          </ion-chip>
+        </h6>
+      </div>
+      <!-- <ion-button expand="full" color="primary">http://rogerfederer.com</ion-button>
+      <ion-button expand="full" color="secondary">@RogerFederer on Twitter</ion-button>
+      <ion-button expand="full" color="secondary">View profile at ATP</ion-button> -->
+      <p> <ion-icon name="briefcase" class="info"></ion-icon>{{profeesion}}</p>
+      <p> <ion-icon name="mail" class="info"></ion-icon> {{userEmail}}</p>
+      <p> <ion-icon name="call" class="info"></ion-icon> {{contactNumber}}</p>
+      <p> <ion-icon name="home" class="info"></ion-icon> solapur,Maharashtra</p>
+      <div class="last-btn">
+        <ion-button expand="full" color="primary"(click)=" getMemberList()">View All Family Members</ion-button>
+        <ion-button expand="full" color="secondary">Edit Details</ion-button>
+      </div>
+
+    </div>
+  </div>
+
+
+</ion-content>

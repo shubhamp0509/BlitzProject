@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar class="profileToolbar">
+    <ion-buttons slot="start">
+      <ion-button color="light" (click)="backButton()" routerDirection="root">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+      <ion-title>Member Details</ion-title>
+    </ion-buttons>
+
+    <!-- <ion-buttons slot="end">
+      <ion-button slot="end" routerLink="/login">
+        <ion-icon name="exit-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-list *ngFor="let jsons of members" >
+
+
+    <ion-item  >
+      <ion-avatar slot="start">
+        <img src="../../../assets/icon/favicon.png">
+      </ion-avatar>
+      <ion-label>
+        <h2 > <ion-icon name="person"></ion-icon>{{jsons.fName}}</h2>
+        <h3> <ion-icon name="mail-open"></ion-icon>{{jsons.email}}</h3>
+        <h4> <ion-icon name="transgender"></ion-icon>{{jsons.gender}}</h4>
+        <h4>  <ion-icon name="heart-outline"></ion-icon>{{jsons.bloodGroup}}</h4>
+        <h4>  <ion-icon name="briefcase"></ion-icon> {{jsons.profeesion}}</h4>
+        <h4>   <ion-icon name="people"></ion-icon>{{jsons.relation}}</h4>
+        <h4>   <ion-icon name="call"></ion-icon>{{jsons.mobile}}</h4>
+
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

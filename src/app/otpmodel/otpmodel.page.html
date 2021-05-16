@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Verifcation Otp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <form [formGroup]="otpForm" novalidate>
+
+<ion-item lines="full">
+  <ion-input formControlName="otp" type="text" required placeholder="Enter otp" ></ion-input>
+ </ion-item>
+
+ <ion-button (click)="otpSubmit()" > verify</ion-button>
+</form>
+
+
+<!-- {{mobile}} -->
+
+</ion-content>

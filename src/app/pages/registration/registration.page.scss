@@ -1,0 +1,40 @@
+
+.forms,label{
+
+  color: gray;
+  font-size:13px;
+
+
+}
+
+*
+{
+    --ion-background-color:#f1f1f1;
+}
+
+
+
+.addBtn{
+    text-transform: capitalize;
+    font-weight: 300;
+    --background:#628cff;
+    --border-radius:7px;
+    --box-shadow: none;
+    margin-left: 100px;
+    // margin-bottom: 15px;
+  //   margin-top: 21px;
+    ion-icon{
+        margin-right: 1px;
+    }
+}
+
+.reset{
+    text-transform: capitalize;
+    font-weight: 300;
+    --background:#a57d7d;
+    --border-radius:7px;
+    --box-shadow: none;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    margin-top: 21px;
+}
